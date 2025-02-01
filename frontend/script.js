@@ -60,7 +60,7 @@ function toggleDarkMode() {
     body.classList.remove("light-mode");
     body.classList.add("dark-mode");
     centerImage.src = "dlm-dark.jpg";
-    themeToggleBtn.textContent = "Toggle Light Mode";
+    themeToggleBtn.textContent = "Give Green Card";
   } else {
     body.classList.remove("dark-mode");
     body.classList.add("light-mode");
