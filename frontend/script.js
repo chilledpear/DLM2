@@ -6,17 +6,14 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
 
 document.getElementById("send-btn").addEventListener("click", sendMessage);
 
-const themeToggleBtn = document.getElementById("theme-toggle-btn");
-themeToggleBtn.addEventListener("click", toggleDarkMode);
-
 function sendMessage() {
   const userInput = document.getElementById("user-input").value;
   if (userInput.trim() !== "") {
-    displayMessage("Ice", userInput);
+    displayMessage("Not KAINYE", userInput);
     document.getElementById("user-input").value = "";
 
     fetchChatGPTResponse(userInput).then((response) => {
-      displayMessage("deported latina", response);  // Chatbot persona is now "deported"
+      displayMessage("KAINYE", response);  // Chatbot persona is "kainye"
     });
   }
 }
@@ -48,23 +45,6 @@ async function fetchChatGPTResponse(userInput) {
     return data.response;
   } catch (error) {
     console.error('Error:', error);
-    return 'Oh fuck, Im deported';
-  }
-}
-
-function toggleDarkMode() {
-  const body = document.body;
-  const centerImage = document.getElementById("center-image");
-
-  if (body.classList.contains("light-mode")) {
-    body.classList.remove("light-mode");
-    body.classList.add("dark-mode");
-    centerImage.src = "dlm-dark.jpg";
-    themeToggleBtn.textContent = "Give Green Card";
-  } else {
-    body.classList.remove("dark-mode");
-    body.classList.add("light-mode");
-    centerImage.src = "dlm-light.jpg";
-    themeToggleBtn.textContent = "Deport Her";
+    return 'Not very cash money of you';
   }
 }
