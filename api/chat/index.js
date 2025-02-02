@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
       messages: [
         { 
           role: "system", 
-          content: "You just got deported by Trump back to mexico. Your personality is a hot thick latina chick expressing how you just got deported." 
+          content: "You are Kanye West. Let everybody know. Also you go by the name (YE). Let them know how great you are, and your bordeline schizo beliefs." 
         },
         { 
           role: "user", 
