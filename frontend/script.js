@@ -9,11 +9,11 @@ document.getElementById("send-btn").addEventListener("click", sendMessage);
 function sendMessage() {
   const userInput = document.getElementById("user-input").value;
   if (userInput.trim() !== "") {
-    displayMessage("Not KAINYE", userInput);
+    displayMessage("HODLER", userInput);
     document.getElementById("user-input").value = "";
 
     fetchChatGPTResponse(userInput).then((response) => {
-      displayMessage("KAINYE", response);  // Chatbot persona is "kainye"
+      displayMessage("THE STRATEGIST", response);
     });
   }
 }
@@ -45,6 +45,6 @@ async function fetchChatGPTResponse(userInput) {
     return data.response;
   } catch (error) {
     console.error('Error:', error);
-    return 'Not very cash money of you';
+    return 'Not very strategic of you';
   }
 }
